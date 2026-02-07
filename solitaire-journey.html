@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纸牌穿越古今 - TuleGame</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .game-detail-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(255, 182, 193, 0.2), rgba(0, 0, 0, 0.6)), url('assets/images/solitaire-journey/主界面.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 60px;
+            position: relative;
+        }
+        .game-detail-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(5px);
+            z-index: -1;
+        }
+        .game-features {
+            background-color: var(--bg-card);
+            padding: 3rem;
+            border-radius: 15px;
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-item {
+            text-align: center;
+        }
+        .feature-item i {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .game-screenshots {
+            margin-top: 4rem;
+        }
+        .screenshot-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-items: center;
+        }
+        .screenshot-placeholder {
+            aspect-ratio: 9/16;
+            width: 100%;
+            max-width: 280px;
+            background-color: #333;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            overflow: hidden;
+            position: relative;
+            border: 4px solid #222;
+        }
+        .screenshot-placeholder i {
+            font-size: 3rem;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .download-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #333;
+            transition: var(--transition);
+        }
+        .download-btn:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+        .btn-text span {
+            display: block;
+            font-size: 0.7rem;
+            text-align: left;
+        }
+        .btn-text strong {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">TuleGame</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">首页</a></li>
+                <li><a href="index.html#games">游戏列表</a></li>
+                <li><a href="index.html#about">关于我们</a></li>
+                <li><a href="privacy.html">隐私政策</a></li>
+                <li><a href="index.html#contact">联系方式</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 详情页 Hero -->
+    <header class="game-detail-hero">
+        <div class="hero-content">
+            <h1>纸牌穿越古今</h1>
+            <p>休闲 / 纸牌 / 益智</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="game-features">
+                <h2 class="section-title">游戏特色</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: var(--text-gray);">
+                    《纸牌穿越古今》不仅仅是一场简单的接龙游戏，它是一次横跨千年的文明之旅。在经典的玩法中融入了丰富的历史叙事，带给你前所未有的视听享受。
+                </p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-history fa-3x"></i>
+                        <h3>时空旅行</h3>
+                        <p>从古埃及的神秘金字塔到盛唐的繁华长安，每一个关卡都是一个新的时代。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-palette fa-3x"></i>
+                        <h3>精美卡面</h3>
+                        <p>根据不同时代背景精心设计的卡牌样式，收集控的福音。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-brain fa-3x"></i>
+                        <h3>益智关卡</h3>
+                        <p>数百个精心设计的接龙关卡，难度循序渐进，极具挑战性。</p>
+                    </div>
+                </div>
+
+                <div class="download-buttons">
+                    <a href="#" class="download-btn">
+                        <i class="fab fa-apple"></i>
+                        <div class="btn-text">
+                            <span>Download on the</span>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="download-btn">
+                        <i class="fab fa-google-play"></i>
+                        <div class="btn-text">
+                            <span>Get it on</span>
+                            <strong>Google Play</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="game-screenshots">
+                <h2 class="section-title">游戏截图</h2>
+                <div class="screenshot-container">
+                    <div class="screenshot-placeholder">
+                        <img src="assets/images/solitaire-journey/主界面.png" alt="主界面" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <img src="assets/images/solitaire-journey/游戏界面.png" alt="游戏界面" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="screenshot-placeholder">
+                        <img src="assets/images/solitaire-journey/卡包设置界面.png" alt="卡包设置界面" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">TuleGame</div>
+                <p>联系我们: wweitaptap@163.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TuleGame Studio. All rights reserved. | <a href="privacy.html">隐私政策</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
